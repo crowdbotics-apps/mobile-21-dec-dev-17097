@@ -29,13 +29,11 @@ export default class Blank extends React.Component {
     Switch_140: true,
     TextInput_146: "",
     DateTimePicker_157: new Date(""),
-    CheckBox_5: true,
-    CheckBox_7: true,
-    DateTimePicker_150: new Date("")
+    CheckBox_7: true
   }
 
   render = () => (
-    <View>
+    <View style={styles.View_1}>
       <CheckBox
         title="Checkbox"
         checked={this.state.CheckBox_73}
@@ -64,23 +62,6 @@ export default class Blank extends React.Component {
         }
       />
       <Text>Sample text content</Text>
-      <Image
-        resizeMode="contain"
-        source={{
-          uri:
-            "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/file_example_JPG_100kB_vYmVaLy.jpg"
-        }}
-        style={styles.Image_4}
-      />
-      <CheckBox
-        title="Radio button"
-        disabled={false}
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
-        containerStyle={styles.CheckBox_5}
-        checked={this.state.CheckBox_5}
-        onPress={nextChecked => this.setState({ CheckBox_5: nextChecked })}
-      />
       <CheckBox
         title="Radio button"
         checkedIcon="dot-circle-o"
@@ -88,50 +69,23 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_7}
         onPress={nextChecked => this.setState({ CheckBox_7: nextChecked })}
       />
-      <DateTimePicker
-        showIcon={false}
-        date={this.state.DateTimePicker_150}
-        onDateChange={selectedDate =>
-          this.setState({ DateTimePicker_150: selectedDate })
-        }
-      />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  View_1: {},
+  View_1: {
+    borderWidth: 10,
+    borderLeftWidth: 10,
+    borderRightWidth: 10,
+    borderTopWidth: 10,
+    borderBottomWidth: 10
+  },
   CheckBox_73: {},
   Button_2: {},
   Switch_140: { alignSelf: "flex-start" },
   TextInput_146: {},
   DateTimePicker_157: {},
   Text_3: {},
-  Image_4: {
-    width: 100,
-    overflow: "hidden",
-    alignSelf: "center",
-    borderWidth: 6,
-    borderLeftWidth: 6,
-    borderRightWidth: 6,
-    borderTopWidth: 6,
-    borderBottomWidth: 6,
-    borderRadius: 17
-  },
-  CheckBox_5: {
-    marginTop: 5,
-    marginBottom: 5,
-    paddingLeft: 5,
-    paddingRight: 5,
-    paddingTop: 5,
-    paddingBottom: 5,
-    textAlign: "left",
-    textAlignVertical: "center",
-    textDecorationLine: "none",
-    textTransform: "none",
-    lineHeight: 12,
-    letterSpacing: 0
-  },
-  CheckBox_7: {},
-  DateTimePicker_150: {}
+  CheckBox_7: {}
 })
