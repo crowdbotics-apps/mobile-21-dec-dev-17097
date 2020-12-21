@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 10,
     borderRightWidth: 10,
     borderTopWidth: 10,
-    borderBottomWidth: 10
+    borderBottomWidth: 10,
+    borderRadius: 19
   },
   CheckBox_73: {},
   Button_2: {},
