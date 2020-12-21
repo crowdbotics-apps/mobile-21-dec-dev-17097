@@ -33,13 +33,13 @@ export default class Blank extends React.Component {
   }
 
   render = () => (
-    <View style={styles.View_1}>
+    <View>
       <CheckBox
         title="Checkbox"
         checked={this.state.CheckBox_73}
         onPress={nextChecked => this.setState({ CheckBox_73: nextChecked })}
       />
-      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Button title="" onPress={() => alert("Pressed!")} />
       <Switch
         trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         style={styles.Switch_140}
@@ -74,13 +74,7 @@ export default class Blank extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  View_1: {
-    borderWidth: 0,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderTopWidth: 0,
-    borderBottomWidth: 0
-  },
+  View_1: {},
   CheckBox_73: {},
   Button_2: {},
   Switch_140: { alignSelf: "flex-start" },
